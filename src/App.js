@@ -20,13 +20,13 @@ import ProductDetailPage from './pages/ProductDetail';
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: '/', // Absolute path
     element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
-      { path: '/', element: <HomePage /> },
-      { path: '/products', element: <ProductsPage /> },
-      { path: '/products/:productId', element: <ProductDetailPage /> },
+      { path: '', element: <HomePage /> }, // Relative path
+      { path: 'products', element: <ProductsPage /> },
+      { path: 'products/:productId', element: <ProductDetailPage /> },
     ],
   },
 ]);
